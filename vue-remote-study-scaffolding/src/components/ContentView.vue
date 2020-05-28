@@ -1,12 +1,20 @@
 <template>
   <div class="content-view">
       Content
+      <p>
+        {{testString}}
+      </p>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'ContentView'
+  name: 'ContentView',
+  computed: {
+    testString() {
+      return this.$store.state.testString
+    }
+  }
 }
 </script>
 
